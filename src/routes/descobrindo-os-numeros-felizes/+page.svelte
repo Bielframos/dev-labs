@@ -68,14 +68,14 @@
 		}
 
 		let result = happyCalc(valueNum);
-		let resultList = [result];
+		let resultList = new Set([result]);
 
 		do {
 			if (knownLoops.includes(result)) return alert('Esse número é triste!');
-			if (resultList.length !== new Set(resultList).size) return alert('Esse número é triste!');
+			if (resultList.has(result)) return alert('Esse número é triste!');
 
 			result = happyCalc(result);
-			resultList.push(result);
+			resultList.add(result);
 		} while (result !== 1);
 
 		return alert('Esse é um número feliz!');
