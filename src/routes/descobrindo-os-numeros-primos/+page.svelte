@@ -33,6 +33,8 @@
 	}
 </script>
 
+<h1>Descobrindo os números primos</h1>
+
 <form onsubmit={handleForm}>
 	<label for="numberToCheck"
 		>Número para checar: <input
@@ -42,5 +44,5 @@
 			required
 		/></label
 	>
-	<button>Verificar se é primo</button>
+	<button>Checar se é primo</button>
 </form>
